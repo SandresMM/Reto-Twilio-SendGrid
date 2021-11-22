@@ -1,4 +1,4 @@
-const client = require('twilio')('ACa5d13d80f4c8729282569d18a277379b', '2bd1bd2523b35e1be62e57a3dab401fe');
+const client = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 
 async function sendSms() {
     try {
