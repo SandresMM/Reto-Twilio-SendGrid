@@ -1,0 +1,63 @@
+//User routes test
+
+###
+POST http://localhost:3000/api/users/add HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Sergio",
+    "lastName": "Monsalve",
+    "age": 22,
+    "email": "sandres_24@hotmail.com",
+    "password": "Sergi*123"
+}
+
+###
+GET http://localhost:3000/api/users HTTP/1.1
+
+###
+GET http://localhost:3000/api/users/61953a197fd01e48390c8274 HTTP/1.1
+
+###
+DELETE http://localhost:3000/api/users/delete/61953a197fd01e48390c8274 HTTP/1.1
+
+###
+PUT http://localhost:3000/api/users/update/61953538e213cbccc3575ba7 HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Sergio",
+    "lastName": "Monsalve",
+    "age": 22,
+    "email": "sandreslan24@gmail.com",
+    "password": "Sergi*123"
+}
+
+//Rol routes test
+
+###
+POST http://localhost:3000/api/roles/add HTTP/1.1
+Content-Type: application/json
+
+{
+    "rolName": "Consumidor",
+    "rolDescription": "Rol de consumidor"
+}
+
+###
+GET http://localhost:3000/api/roles HTTP/1.1
+
+###
+GET http://localhost:3000/api/roles/6195376c9b2f366e5f74b61e HTTP/1.1
+
+###
+DELETE http://localhost:3000/api/roles/delete/61953c5e1b78f9fca145cc66 HTTP/1.1
+
+###
+PUT http://localhost:3000/api/roles/update/61953cfb6f3f5f52f89302f8 HTTP/1.1
+Content-Type: application/json
+
+{
+    "rolName": "Consumidor",
+    "rolDescription": "Rol de consumidor"
+}
